@@ -1,7 +1,10 @@
 <template>
   <div class="car-details">
     <h1>Welcome to car details</h1>
-    <img v-if="state.loaded" :src="car.imgUrl" alt="" />
+    <div v-if="state.loaded">
+      <img :src="car.imgUrl" alt="" /><br />
+      {{ car }}
+    </div>
     <h1 v-else>Loading...</h1>
   </div>
 </template>
